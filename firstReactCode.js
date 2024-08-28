@@ -1,15 +1,36 @@
-// how do we create nested element in react like css
+// how do we create nested element in react like css 
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const nested = React.createElement("div",{id:"parent"},
-    React.createElement(
-        "div",
-        {id:"child"},
-        React.createElement("h1",{},"i am h1 tag")
-    )
-    );
+// Core react Element
 
-// const heading = React.createElement("h1",{id: "heading"},"hello World")
+// this is how core react is written and this is not optimum way to write react for it we use JSX
 
-  const root = ReactDOM.createRoot(document.getElementById("root"))
+const Heading = (
+<h1 className="ab" tabIndex="5">passing element inside component
+</h1>);
 
-  root.render(nested)
+
+// Creating Element using JSX
+// JSX is not HTML It is like html syntax
+
+
+const data = 1000
+
+
+// components => everything inside react is component
+
+const Headingcomponent = () =>(
+   <div id="container"> 
+   
+    {data}
+    
+   <h1 className="abc">this is funtional component
+
+   </h1>
+   </div>
+)
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+
+root.render(<Headingcomponent/>)
